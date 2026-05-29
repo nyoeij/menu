@@ -11,11 +11,18 @@
     function gtag(){dataLayer.push(arguments);}
 
     gtag('js', new Date());
-    gtag('config', 'G-GLMHP0PB2H');
+
+    gtag('config', 'G-GLMHP0PB2H', {
+      page_path: '/menu'
+    });
   </script>
 
-  <!-- redirect setelah 2 detik -->
-  <meta http-equiv="refresh" content="2; url=/menu.pdf">
+  <!-- delay redirect supaya GA sempat baca -->
+  <script>
+    setTimeout(function(){
+      window.location.href = "/menu.pdf";
+    }, 2000);
+  </script>
 </head>
 
 <body>
